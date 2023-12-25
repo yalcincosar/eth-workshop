@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"eth-workshop/wallet"
+	"fmt"
+)
 
 func main() {
-	fmt.Println("vim-go")
+	privateKey, walletAddress := wallet.GenerateWallet()
+	fmt.Println("Private key: " + privateKey)
+	fmt.Println("Wallet address: " + walletAddress)
 }
